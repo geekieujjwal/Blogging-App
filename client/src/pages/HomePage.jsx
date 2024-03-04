@@ -8,18 +8,20 @@ import TrendingPanel from "../components/TrendingPanel";
 
 const HomePage = () => {
   return (
-    <div className="flex bg-[#F5F5F5]">
-      <div>
-        <Header />
-        <Sidebar />
-        <Navbar />
-        <BlogCard />
+    <>
+      <Header />
+      <div className="flex gap-5 bg-[#F5F5F5] pr-5">
+        <div>
+          <Sidebar />
+          <Navbar />
+          <BlogCard />
+        </div>
+        <div className="mt-12">
+          <SubscriptionPanel />
+          <TrendingPanel />
+        </div>
       </div>
-      <div>
-        <SubscriptionPanel />
-        <TrendingPanel />
-      </div>
-    </div>
+    </>
   );
 };
 

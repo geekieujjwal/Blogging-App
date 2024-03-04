@@ -6,7 +6,7 @@ import avatar from "../assets/avatar.png";
 
 const Blogs = () => {
   return (
-    <div className="border-2 border-red-500 w-[70vw] pb-4 bg-white">
+    <div className="w-[70vw] pb-4 bg-white">
       <div>
         <img src={blog1img} alt="img" className="w-full" />
       </div>
