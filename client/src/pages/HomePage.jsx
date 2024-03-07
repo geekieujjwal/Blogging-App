@@ -2,7 +2,7 @@ import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Navbar from "../components/Navbar";
-import BlogCard from "../components/BlogCard";
+import BlogCard from "../components/BlogData";
 import SubscriptionPanel from "../components/SubscriptionPanel";
 import TrendingPanel from "../components/TrendingPanel";
 

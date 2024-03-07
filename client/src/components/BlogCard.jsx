@@ -1,10 +1,9 @@
 import React from "react";
-import { FaRegHeart, FaRegComment, FaRegBookmark } from "react-icons/fa";
-
 import blog1img from "../assets/blog1img.png";
 import avatar from "../assets/avatar.png";
+import { FaRegHeart, FaRegComment, FaRegBookmark } from "react-icons/fa";
 
-const Blogs = () => {
+const BlogCard = ({ blogData }) => {
   return (
     <div className="w-[70vw] pb-4 bg-white">
       <div>
@@ -20,9 +19,7 @@ const Blogs = () => {
           <span className="text-sm text-[#999999]">Feb 29</span>
         </div>
       </div>
-      <h3 className="text-3xl font-bold ml-12">
-        Secure your API with these 16 Practices with Apache APISIX - part 2
-      </h3>
+      <h3 className="text-3xl font-bold ml-12">{blogData.title}</h3>
       {/* Tags */}
       <div className="flex gap-3 ml-12 mb-6 mt-4">
         <span>#security</span>
@@ -56,4 +53,4 @@ const Blogs = () => {
   );
 };
 
-export default Blogs;
+export default BlogCard;
