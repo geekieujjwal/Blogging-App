@@ -17,8 +17,8 @@ const Blogs = () => {
 
   console.log(blogData, data);
 
-  const blogsJsx = blogData?.map((blogData) => {
-    return <BlogCard blogData={blogData} />;
+  const blogsJsx = blogData?.map((blogData, index) => {
+    return <BlogCard key={index} blogData={blogData} />;
   });
 
   return <div>{isLoading ? <div>Loading...</div> : blogsJsx}</div>;

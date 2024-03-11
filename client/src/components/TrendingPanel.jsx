@@ -25,15 +25,15 @@ const TrendingPanel = () => {
         </p>
       </div>
       <hr className="border-[0.5px] border-gray-200" />
-      {trendingArr.map(({ punchLine, comments }) => {
+      {trendingArr.map(({ punchLine, comments }, index) => {
         return (
-          <>
+          <div key={index}>
             <div className="px-3 hover:cursor-pointer hover:text-blue-600">
               <p>{punchLine}</p>
               <span className="text-gray-400 text-sm">{comments} Comments</span>
             </div>
             <hr className="border-[0.5px] border-gray-200" />
-          </>
+          </div>
         );
       })}
     </div>
