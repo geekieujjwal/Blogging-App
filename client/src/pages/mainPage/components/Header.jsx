@@ -1,38 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+
 import "../../../App.css";
+import { headingTitlesLeft, headingTitlesRight } from "./Header.constants";
 
 const Header = () => {
-  const headingTitlesLeft = [
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-  ];
-
-  const headingTitlesRight = [
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-    {
-      title: "Lorem",
-    },
-  ];
-
   return (
     <div className="flex justify-around items-center bg-[#1B1D20] text-white h-12 border-b-[1px] border-b-gray-500">
       <div className="flex gap-10">

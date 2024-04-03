@@ -1,21 +1,9 @@
 import React from "react";
-import "../../../App.css";
+
+import "../MainPage.css";
+import { headingTitleFirst, headingTitleSecond } from "./PageHeading.constants";
 
 const PageHeading = () => {
-  const headingTitleFirst = [
-    { value: "B" },
-    { value: "l" },
-    { value: "o" },
-    { value: "g" },
-  ];
-  const headingTitleSecond = [
-    { value: "D" },
-    { value: "e" },
-    { value: "p" },
-    { value: "o" },
-    { value: "t" },
-  ];
-
   return (
     <div className="relative">
       {/*  */}
@@ -26,8 +14,8 @@ const PageHeading = () => {
           className=""
         />
       </div> */}
-      <div className="text-white bg-[url('https://www.webdesignerdepot.com/assets/ui/brand/parallax_bg3.svg')] py-32 tracking-wider">
-        <h1 className="flex gap-5 justify-center text-7xl font-black">
+      <div className="text-white bg-[url('https://www.webdesignerdepot.com/assets/ui/brand/parallax_bg3.svg')] py-20 tracking-wider">
+        <h1 className="flex gap-5 justify-center text-9xl  font-black">
           <div>
             {headingTitleFirst.map((letter) => {
               return <span className="hedr_lttr">{letter.value}</span>;
@@ -41,7 +29,7 @@ const PageHeading = () => {
         </h1>
         <p className="hedr_sub">Explore, Share, and Connect Through Words.</p>
       </div>
-      <hr className="ending_line" />
+      {/* <hr className="ending_line w-[97vw]" /> */}
     </div>
   );
 };
