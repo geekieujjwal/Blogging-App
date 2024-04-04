@@ -134,7 +134,7 @@
   display: flex;
   justify-content: center;
   background-color: black;
-  padding-top: 10px;
+  /* padding-top: 10px; */
 }
 
 .horizontal_line {
@@ -221,4 +221,10 @@
 
 .card_img_one:hover img {
   transform: scale(1.3); /* Zoom in the image on hover */
+}
+
+.individual_card:hover img {
+  transform: scale(1.3);
+  cursor: pointer;
+  transition: transform 0.5s ease;
 }

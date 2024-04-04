@@ -7,7 +7,7 @@ const SponsoredBlogs = () => {
       <div class="horizontal_line_wrapper">
         <div class="horizontal_line"></div>
       </div>
-      <section className="card_wrap p-10">
+      <section className="card_wrap px-10 pt-10">
         <div className="flex justify-evenly">
           {/* First Div */}
           <div className="flex">
@@ -58,7 +58,7 @@ const SponsoredBlogs = () => {
               />
             </div>
             {/* Card Text */}
-            <div className="z-10">
+            <div className="z-10 mt-4">
               <h4 className="text-[#C03035] text-[1rem] font-bold hover:underline decoration-white">
                 COMPILATIONS
               </h4>
@@ -88,21 +88,24 @@ const SponsoredBlogs = () => {
             <div className="max-w-[350px] rounded-xl overflow-hidden card_img_one">
               <div className="overlay"></div>
               <img
-                src="https://www.webdesignerdepot.com/imager/assets/posts/featured/jory_c764524587aa464c671576b8540b19f1.webp"
+                src="https://www.webdesignerdepot.com/imager/assets/posts/featured/spilka_feat_c764524587aa464c671576b8540b19f1.webp"
                 alt="img"
                 className="h-full"
               />
             </div>
             {/* Card Text */}
-            <div className="z-10">
+            <div className="z-10 mt-4">
               <h4 className="text-[#C03035] text-[1rem] font-bold hover:underline decoration-white">
                 COMPILATIONS
               </h4>
               <p className="flex flex-col text-[2rem] text-white font-bold drop-shadow-[0.05em_0.05em_0_rgba(0,0,0)] hover:underline gap-[-10px]">
                 <span style={{ margin: "-5px 0 -10px 0" }}>
-                  3 Essential Design{" "}
-                </span>
-                <span>Trends, April 2024</span>
+                  What Negative Effects
+                </span>{" "}
+                <span style={{ marginBottom: "-10px" }}>
+                  Does a Bad Website Design
+                </span>{" "}
+                <span>Have On My Business?</span>
               </p>
               <p className="text-[1rem] font-bold text-white">
                 By{" "}
@@ -122,13 +125,13 @@ const SponsoredBlogs = () => {
             <div className="max-w-[550px]  rounded-xl overflow-hidden card_img_one">
               <div className="overlay"></div>
               <img
-                src="https://www.webdesignerdepot.com/imager/assets/posts/featured/baw_mar_24_c764524587aa464c671576b8540b19f1.webp"
+                src="https://www.webdesignerdepot.com/imager/assets/posts/featured/uxapp_feat_c764524587aa464c671576b8540b19f1.webp"
                 alt="img"
                 className="h-full"
               />
             </div>
             {/* Card Text */}
-            <div className="z-10">
+            <div className="z-10 text-right">
               <h4 className="text-[#C03035] text-[1rem] font-bold hover:underline decoration-white">
                 SPONSORED
               </h4>
@@ -142,12 +145,14 @@ const SponsoredBlogs = () => {
                 <span style={{ marginBottom: "-25px" }}>Design Have On My</span>
                 <span> Business?</span> */}
                 <span style={{ marginBottom: "-25px", marginTop: "-10px" }}>
-                  10+ Best{" "}
+                  14 Top UX Tools{" "}
                 </span>
-                <span style={{ marginBottom: "-25px" }}>Resources & </span>
-                <span style={{ marginBottom: "-25px" }}>Tools for Web</span>
-                <span style={{ marginBottom: "-25px" }}>Designers (2024 </span>
-                <span> Update)</span>
+                <span style={{ marginBottom: "-25px" }}>
+                  {" "}
+                  for Designers in{" "}
+                </span>
+                {/* <span style={{ marginBottom: "-25px" }}>2024</span> */}
+                <span> the year 2024</span>
               </p>
               <p className="text-[1rem] font-bold text-white">
                 By{" "}
@@ -157,6 +162,10 @@ const SponsoredBlogs = () => {
               </p>
             </div>
           </div>
+        </div>
+        {/* Horizontal Line */}
+        <div class="horizontal_line_wrapper" className="mt-10">
+          <div class="horizontal_line horizontal_line_second"></div>
         </div>
       </section>
     </div>
