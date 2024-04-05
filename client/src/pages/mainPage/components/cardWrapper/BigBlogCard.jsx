@@ -1,18 +1,18 @@
 import React from "react";
 
-const SmallBlogCard = () => {
+const BigBlogCard = () => {
   return (
-    <div className="flex w-[400px] gap-4 individual_card">
-      <div className="w-[40%] h-[98px] rounded-xl overflow-hidden">
+    <div className="w-[380px] individual_card">
+      <div className="w-[100%] h-[157px] rounded-xl overflow-hidden">
         <img
-          src="https://www.webdesignerdepot.com/imager/assets/posts/featured/planning_c764524587aa464c671576b8540b19f1.webp"
+          src="https://www.webdesignerdepot.com/imager/assets/posts/featured/linewire_c764524587aa464c671576b8540b19f1.webp"
           alt="img"
           className="h-full w-full transition-transform duration-[0.7s] transform-gpu hover:scale-[2]"
         />
       </div>
       <div>
-        <h5 className="font-extrabold text-lg hover:underline cursor-pointer">
-          How to Plan Your First Successful Website
+        <h5 className="font-extrabold text-[1.5rem] leading-tight hover:underline cursor-pointer mt-2">
+          LimeWire Developer APIs Herald a New Era of AI Integration
         </h5>
         <p className="text-[#787675]">
           Planning a new website can be exciting and — if you’re
@@ -28,4 +28,4 @@ const SmallBlogCard = () => {
   );
 };
 
-export default SmallBlogCard;
+export default BigBlogCard;

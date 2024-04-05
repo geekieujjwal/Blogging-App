@@ -1,6 +1,5 @@
 .hedr_logo {
   position: relative;
-  border: 2px solid red;
 }
 
 .hedr_logo_link {
@@ -35,7 +34,75 @@
   transition: transform 0.5s;
 }
 
-.hedr_sub {
+.popular_post {
+  position: relative;
+  width: 90%;
+}
+
+.popular_post_link {
+  cursor: pointer;
+  position: relative;
+  /* left: 50%; */
+  /* transform: translateX(-50%); */
+  /* top: 0; */
+  width: 100%;
+  z-index: 10;
+}
+
+.popular_post_link img {
+  transition: transform 0.5s;
+  border-radius: 100%;
+  border: 8px solid black;
+}
+
+.popular_post_link img::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  bottom: -6px;
+  left: -6px;
+  background-color: #141518;
+  z-index: -3;
+  border-radius: 1000px;
+}
+
+.popular_post_parent > div:nth-child(odd):hover img {
+  transform: rotate(35deg);
+}
+
+.popular_post_parent > div:nth-child(even):hover img {
+  transform: rotate(-35deg);
+}
+
+.popular_post_link::before {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  bottom: -8px;
+  left: -8px;
+  background: linear-gradient(
+    135deg,
+    #96c0ff 0%,
+    #6c4f9d 25%,
+    #d42635 50%,
+    #f58437 75%,
+    #ffe295 100%
+  );
+  z-index: -6;
+  border-radius: 1000px;
+  transform: rotate(0deg);
+}
+
+.popular_post_link:hover::before {
+  transform: rotate(360deg);
+}
+
+.hedr_sub,
+.popular_post_heading {
   text-align: center;
   color: #f58335;
   background-clip: text;
@@ -60,6 +127,12 @@
   animation: gradientMove 1.2s linear infinite;
 }
 
+.popular_post_heading {
+  text-align: left;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
 @keyframes gradientMove {
   0% {
     background-position: 0% 50%; /* Initial position */
@@ -69,16 +142,22 @@
   }
 }
 
-.hedr_sub:hover {
+.hedr_sub:hover,
+.popular_post_heading:hover {
   animation-play-state: paused; /* Pause animation on hover */
 }
 
-.hedr_logo_link:hover::before {
+.hedr_logo_link:hover::before,
+.popular_post_link:hover::before {
   transform: rotate(360deg);
 }
 
 .hedr_lttr {
-  transition: color 1s;
+  transition: color 1.2s;
+}
+
+.hedr_lttr:hover {
+  transition: none; /* Disable transition on hover */
 }
 
 .hedr_lttr:nth-child(1):hover {
@@ -220,7 +299,7 @@
 }
 
 .card_img_one:hover img {
-  transform: scale(1.3); /* Zoom in the image on hover */
+  transform: scale(1.3);
 }
 
 .individual_card:hover img {
