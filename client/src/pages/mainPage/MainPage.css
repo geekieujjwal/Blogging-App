@@ -34,6 +34,12 @@
   transition: transform 0.5s;
 }
 
+.hedr_logo_link > img {
+  filter: brightness(0%);
+  padding-top: 1.1px;
+  padding: 2.1px 1px 1px 1px;
+}
+
 .popular_post {
   position: relative;
   width: 90%;
@@ -178,6 +184,18 @@
 
 .hedr_lttr:nth-child(5):hover {
   color: #4f1d22;
+}
+
+.hedr_lttr:nth-child(6):hover {
+  color: #f58435;
+}
+
+.hedr_lttr:nth-child(7):hover {
+  color: #88636f;
+}
+
+.hedr_lttr:nth-child(8):hover {
+  color: #fa766b;
 }
 
 .ending_line {

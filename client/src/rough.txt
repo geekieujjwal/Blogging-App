@@ -1,0 +1,7 @@
+supabase URL: https://ivjxqdjjvfnrcbsvqiqg.supabase.co
+anon public supabase: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Iml2anhxZGpqdmZucmNic3ZxaXFnIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTI2MzI3NzUsImV4cCI6MjAyODIwODc3NX0.MF83Qq_dBdGuhcyg5wzipFHgdPswDIWH21r2InxxUJ0
+
+discord Client ID: 1227098508100636754
+Client secret: g75Ley7MKIu2uxRdnp9FbKif6eU1lPc5
+
+twilio recovery code: XZ6YPF22X9E5N3LD1RJGNLQ6

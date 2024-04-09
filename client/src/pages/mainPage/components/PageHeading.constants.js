@@ -3,6 +3,10 @@ export const headingTitleFirst = [
   { value: "l" },
   { value: "o" },
   { value: "g" },
+  { value: "g" },
+  { value: "i" },
+  { value: "n" },
+  { value: "g" },
 ];
 export const headingTitleSecond = [
   { value: "D" },

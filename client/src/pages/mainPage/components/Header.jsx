@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import hedr_logo from "../../../assets/hedr_logo.png";
 
 import "../../../App.css";
 import { headingTitlesLeft, headingTitlesRight } from "./Header.constants";
@@ -14,11 +15,7 @@ const Header = () => {
       </div>
       <div className="hedr_logo">
         <a href="#" className="hedr_logo_link">
-          <img
-            src="https://www.webdesignerdepot.com/assets/ui/brand/wdd_logo.svg"
-            alt="header-logo"
-            className="w-full"
-          />
+          <img src={hedr_logo} alt="header-logo" className="w-full" />
         </a>
       </div>
       <div className="flex gap-10">

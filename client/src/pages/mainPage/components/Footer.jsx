@@ -63,9 +63,11 @@ const Footer = () => {
         </div>
         <div className="flex flex-col items-center mt-16 gap-5">
           <div>
-            <h5 className="text-3xl font-extrabold text-center">Blog Craze</h5>
+            <h5 className="text-3xl font-extrabold text-center">
+              Blogging Depot
+            </h5>
             <p className="text-gray-400 text-sm">
-              Copyright © 2024 BlogCraze, Inc.
+              Copyright © 2024 BloggingDepot, Inc.
             </p>
           </div>
           <ul className="flex underline">
