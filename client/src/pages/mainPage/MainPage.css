@@ -307,3 +307,141 @@
   cursor: pointer;
   transition: transform 0.5s ease;
 }
+
+.footer-main {
+  background: #070708
+    url("https://www.webdesignerdepot.com/assets/ui/brand/bg-footer.webp")
+    no-repeat center top;
+  background-size: cover;
+  /* display: flex;
+  flex-direction: column; */
+  padding: 6.4rem 4.4rem;
+  color: white;
+}
+
+.footer-heading {
+  font-family: degular, sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 2.2rem;
+  display: inline;
+  color: #f58335;
+  background-image: linear-gradient(
+    135deg,
+    #96c0ff 0%,
+    #6c4f9d 16%,
+    #d42635 33%,
+    #f58437 53%,
+    #d42635 67%,
+    #6c4f9d 84%,
+    #96c0ff 100%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  background-size: 200% 100%;
+  background-position: 0 0;
+  transition: background-position 0.6s;
+}
+
+.footer-heading:hover {
+  background-position: 100% 0;
+}
+
+.input-email {
+  width: 580px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  padding: 1.4em 1.875em;
+  border-radius: 0.625em;
+}
+
+.submit-div {
+  position: relative;
+  z-index: 10;
+}
+
+.submit-div > input {
+  font-family: degular, sans-serif;
+  font-weight: 600;
+  /* font-style: normal; */
+  font-size: 1.812rem;
+  color: #fff;
+  padding: 12px 30px;
+  cursor: pointer;
+}
+
+.submit-div::before {
+  content: "";
+  /* display: inline-block; */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: linear-gradient(
+    135deg,
+    #96c0ff 0%,
+    #6c4f9d 17%,
+    #d42635 34%,
+    #f58437 50%,
+    #d42635 67%,
+    #6c4f9d 84%,
+    #96c0ff 100%
+  );
+  background-size: 200% 100%;
+  transition: background-position 0.6s;
+  z-index: -10;
+  border-radius: 0.6875em;
+}
+
+.submit-div:hover::before {
+  background-position: 100% 0%;
+}
+
+.submit-div::after {
+  content: "";
+  /* display: inline-block; */
+  position: absolute;
+  top: 3px;
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  background-color: #000;
+  z-index: -5;
+  border-radius: 0.625em;
+}
+
+.footer-icons {
+  width: 450px;
+  margin: auto;
+  position: relative;
+  padding: 0 30px;
+}
+
+.icon:hover {
+  cursor: pointer;
+  color: rgb(0, 170, 255);
+}
+
+.footer-icons::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  left: 470px;
+  background-color: #b6c6d5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.footer-icons::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 2px;
+  right: 470px;
+  background-color: #b6c6d5;
+  top: 50%;
+  transform: translateY(-50%);
+}

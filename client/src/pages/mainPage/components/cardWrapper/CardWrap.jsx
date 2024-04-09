@@ -23,7 +23,6 @@ const CardWrap = () => {
         <BigBlogCard />
         <BigBlogCard />
       </div>
-      <div></div>
     </div>
   );
 };
