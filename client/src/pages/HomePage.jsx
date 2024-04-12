@@ -10,7 +10,7 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="flex gap-5 bg-[#F5F5F5] pr-5">
+      <div className="flex gap-5 bg-[#F9EDE7] pr-5">
         <div>
           <Sidebar />
           <Navbar />

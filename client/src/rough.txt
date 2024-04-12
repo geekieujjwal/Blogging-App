@@ -5,3 +5,5 @@ discord Client ID: 1227098508100636754
 Client secret: g75Ley7MKIu2uxRdnp9FbKif6eU1lPc5
 
 twilio recovery code: XZ6YPF22X9E5N3LD1RJGNLQ6
+
+google callback url: https://ivjxqdjjvfnrcbsvqiqg.supabase.co/auth/v1/callback

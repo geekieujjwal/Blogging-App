@@ -1,5 +1,6 @@
 import React from "react";
 import { IoSearchOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 import appLogo from "../assets/appLogo.png";
 
@@ -26,12 +27,16 @@ const Header = () => {
         </div>
       </div>
       <div className="flex gap-3">
-        <button className="rounded-md cursor-pointer hover:text-[#3B49DF] hover:underline px-2 py-1 hover:bg-[#c3c6e4]">
-          Log in
-        </button>
-        <button className="border-[1.7px] cursor-pointer rounded-md border-[#3B49DF] hover:underline hover:text-white hover:bg-[#3B49DF] text-[#3B49DF] px-2 py-1">
-          Create Account
-        </button>
+        <Link to="/login">
+          <button className="rounded-md cursor-pointer hover:text-[#3B49DF] hover:underline px-2 py-1 hover:bg-[#c3c6e4]">
+            Log in
+          </button>
+        </Link>
+        <Link to="/register">
+          <button className="border-[1.7px] cursor-pointer rounded-md border-[#3B49DF] hover:underline hover:text-white hover:bg-[#3B49DF] text-[#3B49DF] px-2 py-1">
+            Create Account
+          </button>
+        </Link>
       </div>
     </div>
   );
