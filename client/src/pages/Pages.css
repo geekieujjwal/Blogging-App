@@ -1,0 +1,28 @@
+.register-divider {
+  width: 50%;
+  margin: auto;
+  position: relative;
+  padding: 0 30px;
+}
+
+.register-divider::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  left: 180px;
+  background-color: #b6c6d5;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.register-divider::before {
+  content: "";
+  position: absolute;
+  width: 80%;
+  height: 1px;
+  right: 180px;
+  background-color: #b6c6d5;
+  top: 50%;
+  transform: translateY(-50%);
+}

@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import { LockClosedIcon, EyeIcon, EyeOffIcon } from "@heroicons/react/solid";
 import { Link } from "react-router-dom";
+import { GoogleLogin } from "@react-oauth/google";
+import { jwtDecode } from "jwt-decode";
 
 function LoginPage() {
   const [showPassword, setShowPassword] = useState(false);
@@ -12,7 +14,7 @@ function LoginPage() {
 
   return (
     <div className="flex justify-center items-center h-screen bg-[#F9EDE7]">
-      <div className="w-full max-w-md px-4 py-8 bg-white rounded-lg shadow-md">
+      <div className="w-full max-w-[550px] px-4 py-8 bg-white rounded-lg shadow-md">
         <h3 className="text-3xl font-semibold mb-3 text-center">
           Join the Community
         </h3>
@@ -20,6 +22,22 @@ function LoginPage() {
           Blogging Depot Community is a community of 1,398,743 amazing bloggers
         </p>
         {/* <h3 className="text-3xl font-semibold mb-6 text-center">Login</h3> */}
+        <div className="flex justify-center mb-3">
+          <GoogleLogin
+            onSuccess={(credentialResponse) => {
+              const credentialResponseDecoded = jwtDecode(
+                credentialResponse.credential
+              );
+              console.log(credentialResponseDecoded);
+            }}
+            onError={() => {
+              console.log("Login Failed");
+            }}
+          />
+        </div>
+        <div className="flex justify-center gap-10 text-[#B6C6D5] register-divider text-xl">
+          <p>OR</p>
+        </div>
         <form className="space-y-4">
           <div>
             <label htmlFor="email" className="block text-gray-700">
@@ -72,8 +90,15 @@ function LoginPage() {
           </div>
           <div className="flex justify-between">
             <div className="space-x-[6px]">
-              <input type="checkbox" name="remember_me" id="remember_me" />
-              <label htmlFor="remember_me">Remember me</label>
+              <input
+                type="checkbox"
+                name="remember_me"
+                id="remember_me"
+                className="cursor-pointer"
+              />
+              <label htmlFor="remember_me" className="cursor-pointer">
+                Remember me
+              </label>
             </div>
             <Link to="#" className="text-blue-600">
               Forgot Password?
@@ -103,7 +128,7 @@ function LoginPage() {
         </form>
         <p className="text-sm mt-4 text-center">
           New to blogging Community?{" "}
-          <a href="#" className="text-blue-500 hover:text-[#2463EB]">
+          <a href="/register" className="text-blue-500 hover:text-[#2463EB]">
             Create account
           </a>
           .
