@@ -10,13 +10,15 @@ const HomePage = () => {
   return (
     <>
       <Header />
-      <div className="flex gap-5 bg-[#F9EDE7] pr-5">
-        <div>
+      <div className="flex gap-5 bg-[#F9EDE7] px-5 pt-5">
+        <div className="flex w-[70%] gap-5">
           <Sidebar />
-          <Navbar />
-          <BlogCard />
+          <div className="w-[70%]">
+            <Navbar />
+            <BlogCard />
+          </div>
         </div>
-        <div className="mt-12">
+        <div className="w-[30%]">
           <SubscriptionPanel />
           <TrendingPanel />
         </div>

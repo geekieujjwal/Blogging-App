@@ -1,15 +1,40 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { LockClosedIcon, EyeIcon, EyeOffIcon } from "@heroicons/react/solid";
+import axios from "axios"; // Import Axios
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 import blogSvg from "../assets/blog.svg";
 import { GoogleLogin } from "@react-oauth/google";
 import { jwtDecode } from "jwt-decode";
 import "./Pages.css";
+import { serverLink } from "../utils/const";
 
 function RegisterPage() {
   const [showPassword, setShowPassword] = useState(false);
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [errorMessage, setErrorMessage] = useState(""); // State to hold error message
+
+  const handleSubmit = async (e) => {
+    e.preventDefault(); // Prevent default form submission behavior
+
+    // Extract form data
+    const formData = {
+      username: e.target.name.value,
+      email: e.target.email.value,
+      password: e.target.password.value,
+    };
+
+    try {
+      // Make POST request to backend
+      const response = await axios.post(`${serverLink}/register`, formData);
+      console.log(response.data); // Log response data
+      // Optionally, redirect user to another page or show a success message
+    } catch (error) {
+      // Handle errors
+      console.error("Error registering new user:", error);
+      setErrorMessage("An error occurred. Please try again."); // Set error message state
+    }
+  };
 
   const togglePasswordVisibility = () => {
     setShowPassword(!showPassword);
@@ -59,7 +84,7 @@ function RegisterPage() {
         <div className="flex justify-center gap-10 text-[#B6C6D5] register-divider text-xl">
           <p>OR</p>
         </div>
-        <form className="space-y-4">
+        <form className="space-y-4" onSubmit={handleSubmit}>
           <div>
             <label htmlFor="name" className="block text-gray-700">
               Name
@@ -144,6 +169,8 @@ function RegisterPage() {
             </a>
             .
           </div>
+          {errorMessage && <div className="text-red-500">{errorMessage}</div>}{" "}
+          {/* Display error message */}
           <button
             type="submit"
             className="w-full bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-colors duration-300 ease-in-out"

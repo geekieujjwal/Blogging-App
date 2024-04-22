@@ -5,7 +5,7 @@ import { FaRegHeart, FaRegComment, FaRegBookmark } from "react-icons/fa";
 
 const BlogCard = ({ blogData }) => {
   return (
-    <div className="w-[70vw] pb-4 bg-white">
+    <div className="w-full pb-4 bg-white">
       <div>
         <img src={blog1img} alt="img" className="w-full" />
       </div>
