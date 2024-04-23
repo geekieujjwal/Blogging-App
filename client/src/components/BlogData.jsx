@@ -1,5 +1,7 @@
 import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
+import Skeleton from "react-loading-skeleton";
+import "react-loading-skeleton/dist/skeleton.css";
 
 import { useThunk } from "../customHooks/useThunk";
 import { fetchAllBlogs } from "../store/thunks/fetchAllBlogs";
@@ -21,7 +23,17 @@ const Blogs = () => {
     return <BlogCard key={index} blogData={blogData} />;
   });
 
-  return <div>{isLoading ? <div>Loading...</div> : blogsJsx}</div>;
+  return (
+    <div>
+      {isLoading ? (
+        <div>
+          <Skeleton count={5} height={100} />
+        </div>
+      ) : (
+        blogsJsx
+      )}
+    </div>
+  );
 };
 
 export default Blogs;

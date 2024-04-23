@@ -6,9 +6,10 @@ exports.getAllBlogPosts = async (req, res) => {
     const blogPosts = await BlogPost.find();
     res.json(blogPosts);
     console.log(blogPosts);
+    return res.status(200).json(blogPosts);
   } catch (error) {
     console.log("Error fetching blog posts", error);
-    res
+    return res
       .status(500)
       .json({ error: "An error occurred while fetching blog posts" });
   }
