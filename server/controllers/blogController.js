@@ -4,7 +4,7 @@ const BlogPost = require("../Models/Blog");
 exports.getAllBlogPosts = async (req, res) => {
   try {
     const blogPosts = await BlogPost.find();
-    res.json(blogPosts);
+    // res.json(blogPosts);
     console.log(blogPosts);
     return res.status(200).json(blogPosts);
   } catch (error) {

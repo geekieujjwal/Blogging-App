@@ -13,7 +13,7 @@ const HomePage = () => {
       <div className="flex gap-5 bg-[#F9EDE7] px-5 pt-5">
         <div className="flex w-[70%] gap-5">
           <Sidebar />
-          <div className="w-[70%]">
+          <div className="w-[70%] max-[1000px]:w-full">
             <Navbar />
             <BlogCard />
           </div>

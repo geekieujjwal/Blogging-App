@@ -7,7 +7,7 @@ import appLogo from "../assets/appLogo.png";
 const Header = () => {
   return (
     <div className="flex justify-between items-center bg-white shadow-md py-3 px-3">
-      <div className="flex gap-3">
+      <div className="flex gap-3 max-[1000px]:ml-8">
         <div className="rounded overflow-hidden">
           <img src={appLogo} alt="app-logo" width="40px" />
         </div>
